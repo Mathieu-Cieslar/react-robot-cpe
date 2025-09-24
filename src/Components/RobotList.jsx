@@ -1,10 +1,11 @@
 import React from 'react';
 import Robot from './Robot';
+import { useSelector } from 'react-redux';
+import { selectAllRobots } from '../selector';
 
 
-const RobotList = ({ robots }) => {
-    console.log("robots", robots);
-
+const RobotList = () => {
+    const robots = useSelector(selectAllRobots);
     return (
         <div>
             {robots.map(robot => (
