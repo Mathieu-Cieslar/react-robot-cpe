@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +42,129 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+.robot-card {
+  max-width: 300px;
+  background-color: #f0f2f5;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.robot-card h1 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #6b7280;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.robot-card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.robot-card p {
+  font-size: 12px;
+  color: #4b5563;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.robot-card p strong {
+  font-weight: 600;
+  color: #374151;
+}
+
+.robot-card img,
+.robot-card object {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 16px auto 0 auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Style pour le label si c'est un composant personnalisé */
+.robot-card .label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+  display: block;
+}
+
+.robot-label {
+  font-size: 12px;
+  color: #4b5563;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* Robot Parts Card */
+.robot-parts-card {
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.robot-parts-card h1 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #6b7280;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.robot-parts-card .part-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 8px 0;
+}
+
+.robot-parts-card .part-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 80px;
+}
+
+.robot-parts-card .part-value {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.robot-parts-card .price-badge {
+  background-color: #2563eb;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.robot-parts-card .loading {
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
 }

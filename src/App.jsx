@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import Robot from "./Components/Robot";
+import RobotComponent from "./Components/RobotComponent";
 
-function App() {
-  const [count, setCount] = useState(0)
+function App(props) {
+  // state is initialized by a props
+  const [title, setTitle] = useState(props.title);
+  const [count, setCount] = useState(0);
+  const [robots, setRobots] = useState([]);
+
+  const handleChangeTitle = (e) => {
+    // this.setState allows us to update the state value
+    setTitle(e.target.value);
+  };
+
+  const handleHoverTitle = (e) => {
+    setCount(count + 1);
+  }
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="App">
+      {/* <h1 onMouseOver={handleHoverTitle}> this is my first React Component</h1>
+      <label htmlFor="titleInput">Title</label>
+      <input
+        type="text"
+        id="titleInput"
+        onChange={handleChangeTitle}
+        value={title}
+      />
+      <h3>{title}</h3>
+      <h3>Hover count: {count}</h3> */}
 
-export default App
+      <RobotComponent />
+    </div>
+  );
+}
+export default App;
